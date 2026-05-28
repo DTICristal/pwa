@@ -31,13 +31,8 @@
     <p>Carregando...</p>
 
     <script>
-        // Redireciona para o app real após SW registrado
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js').then(function() {
-                window.location.href = 'https://mobile.arrozcristal.ind.br/mobile/auth/login.php';
-            });
-        } else {
-            window.location.href = 'https://mobile.arrozcristal.ind.br/mobile/auth/login.php';
+            navigator.serviceWorker.register('sw.js');
         }
     </script>
 </body>
