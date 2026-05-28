@@ -2,6 +2,7 @@
   "name": "Expedição - Cristal Alimentos",
   "short_name": "Expedição",
   "description": "Sistema de Expedição - Cristal Alimentos",
+  "id": "https://dticristal.github.io/pwa/",
   "start_url": "https://dticristal.github.io/pwa/",
   "scope": "https://dticristal.github.io/pwa/",
   "display": "standalone",
