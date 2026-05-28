@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expedição - Cristal Alimentos</title>
+    <meta name="description" content="Sistema de Expedição - Cristal Alimentos">
+    <meta name="theme-color" content="#1565c0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/icon-192x192.png">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #f0f4f8;
+            font-family: sans-serif;
+            color: #1565c0;
+        }
+        img { width: 96px; border-radius: 20px; margin-bottom: 16px; }
+        h1  { font-size: 1.3rem; margin: 0 0 8px; }
+        p   { font-size: .9rem; color: #666; margin: 0; }
+    </style>
+</head>
+<body>
+    <img src="images/icon-192x192.png" alt="Cristal Alimentos">
+    <h1>Expedição - Cristal Alimentos</h1>
+    <p>Carregando...</p>
+
+    <script>
+        // Redireciona para o app real após SW registrado
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').then(function() {
+                window.location.href = 'https://mobile.arrozcristal.ind.br/mobile/auth/login.php';
+            });
+        } else {
+            window.location.href = 'https://mobile.arrozcristal.ind.br/mobile/auth/login.php';
+        }
+    </script>
+</body>
+</html>
